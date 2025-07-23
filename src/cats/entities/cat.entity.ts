@@ -1,7 +1,9 @@
+import { Breed } from 'src/breeds/entities/breed.entity';
 import {
   Column,
   DeleteDateColumn,
-  Entity
+  Entity,
+  ManyToOne
 } from 'typeorm';
 
 @Entity()
@@ -16,9 +18,9 @@ export class Cat {
   @Column()
   age: number;
 
-  @Column()
-  breed: string;
-
   @DeleteDateColumn()
   deleteAt: Date;
+
+  @ManyToOne(() => Breed, (breed) => breed.id)
+  breed: Breed;
 }

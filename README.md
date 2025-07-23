@@ -30,14 +30,14 @@
 ```bash
 $ yarn install
 
-# para hacer conversiones directas en los parametros, validaciones de tipos y no lleguen siempre como string
+# para hacer conversiones directas en los parametros, validaciones de tipos en DTO y no lleguen siempre como string 
 $ yarn add class-validator class-transformer -SE
 
 # instalar el ORM que sync con mysql
 $ yarn add @nestjs/typeorm typeorm mysql2
 
 # create module 
-$ nest g res cats --no-spec
+$ nest g res <entity> --no-spec
 ```
 
 ## Compile and run the project
